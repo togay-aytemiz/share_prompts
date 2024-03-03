@@ -26,9 +26,11 @@ const MyProfile = () => {
     if (session?.user.id) fetchPosts();
   }, [session?.user.id]);
 
-  const handleEdit = (post) => {
-    router.push(`/update-prompt?id=${post._id}`);
-  };
+  // const handleEdit = (post) => {
+  //   router.push(`/update-prompt?id=${post._id}`);
+  // };
+
+  const handleEdit = () => {};
 
   const handleDelete = async (post) => {
     const hasConfirmed = confirm(
