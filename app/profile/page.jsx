@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 
 import Profile from "@components/Profile";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const MyProfile = () => {
   const router = useRouter();
   const { data: session } = useSession();

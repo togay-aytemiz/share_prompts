@@ -5,6 +5,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Form from "@components/Form";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const CreatePrompt = () => {
   const router = useRouter();
   const { data: session } = useSession();
