@@ -33,6 +33,11 @@ const UpdatePrompt = () => {
 
     if (!promptId) return alert("Missing PromptId!");
 
+    const router = useRouter();
+    if (!router.isFallback && !promptId) {
+      return <ErrorPage statusCode={404} />;
+    }
+
     try {
       const response = await fetch(`/api/prompt/${promptId}`, {
         method: "PATCH",
